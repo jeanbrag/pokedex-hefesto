@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/allView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="ivPokemonImage,tvPokemonName,tvPokemonNumber" />
+
+    <ImageView
+        android:id="@+id/ivPokemonImage"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tvPokemonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Pikachu"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/tvPokemonNumber"
+        app:layout_constraintStart_toEndOf="@+id/ivPokemonImage"
+        app:layout_constraintTop_toTopOf="@+id/ivPokemonImage"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+
+
+    <TextView
+        android:id="@+id/tvPokemonNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="#025"
+        android:textColor="#BCBCBC"
+        app:layout_constraintBottom_toBottomOf="@id/ivPokemonImage"
+        app:layout_constraintStart_toStartOf="@id/tvPokemonName"
+        app:layout_constraintTop_toBottomOf="@id/tvPokemonName" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="fill_parent"
+        android:layout_height="0.7dp"
+        android:layout_below="@+id/allView"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivPokemonImage" />
+
+
+    <!--    <View-->
+<!--        android:layout_width="8dp"-->
+<!--        android:layout_height="1dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        android:background="@color/secondaryColor"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="@id/imageView"-->
+<!--        />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
